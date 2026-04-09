@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Company SYSTEM "Q4_employees.dtd">
+<Company xmlns:emp="http://www.company.com/employee">
+    <emp:Employee>
+        <emp:EmpID>E001</emp:EmpID>
+        <emp:EmpName>John Anderson</emp:EmpName>
+        <emp:Department>Software Development</emp:Department>
+        <emp:Salary>60000</emp:Salary>
+        <emp:Email>john.anderson@company.com</emp:Email>
+    </emp:Employee>
+
+    <emp:Employee>
+        <emp:EmpID>E002</emp:EmpID>
+        <emp:EmpName>Sarah Mitchell</emp:EmpName>
+        <emp:Department>Human Resources</emp:Department>
+        <emp:Salary>50000</emp:Salary>
+        <emp:Email>sarah.mitchell@company.com</emp:Email>
+    </emp:Employee>
+
+    <emp:Employee>
+        <emp:EmpID>E003</emp:EmpID>
+        <emp:EmpName>Michael Brown</emp:EmpName>
+        <emp:Department>Finance</emp:Department>
+        <emp:Salary>55000</emp:Salary>
+        <emp:Email>michael.brown@company.com</emp:Email>
+    </emp:Employee>
+
+    <emp:Employee>
+        <emp:EmpID>E004</emp:EmpID>
+        <emp:EmpName>Lisa Johnson</emp:EmpName>
+        <emp:Department>Marketing</emp:Department>
+        <emp:Salary>52000</emp:Salary>
+        <emp:Email>lisa.johnson@company.com</emp:Email>
+    </emp:Employee>
+
+    <emp:Employee>
+        <emp:EmpID>E005</emp:EmpID>
+        <emp:EmpName>Robert Davis</emp:EmpName>
+        <emp:Department>Software Development</emp:Department>
+        <emp:Salary>65000</emp:Salary>
+        <emp:Email>robert.davis@company.com</emp:Email>
+    </emp:Employee>
+</Company>
