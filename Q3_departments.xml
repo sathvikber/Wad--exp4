@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Departments xmlns:cse="http://www.college.com/cse" 
+             xmlns:ece="http://www.college.com/ece">
+    
+    <cse:Department>
+        <cse:DeptName>Computer Science Engineering</cse:DeptName>
+        <cse:Faculty>
+            <cse:Professor>
+                <cse:Name>Dr. Amit Kumar</cse:Name>
+                <cse:Subject>Data Structures</cse:Subject>
+                <cse:Experience>10 years</cse:Experience>
+            </cse:Professor>
+            <cse:Professor>
+                <cse:Name>Dr. Neha Sharma</cse:Name>
+                <cse:Subject>Database Management</cse:Subject>
+                <cse:Experience>8 years</cse:Experience>
+            </cse:Professor>
+        </cse:Faculty>
+    </cse:Department>
+
+    <ece:Department>
+        <ece:DeptName>Electronics and Communication Engineering</ece:DeptName>
+        <ece:Faculty>
+            <ece:Professor>
+                <ece:Name>Prof. Rajesh Patel</ece:Name>
+                <ece:Subject>Signal Processing</ece:Subject>
+                <ece:Experience>12 years</ece:Experience>
+            </ece:Professor>
+            <ece:Professor>
+                <ece:Name>Prof. Priya Gupta</ece:Name>
+                <ece:Subject>Digital Electronics</ece:Subject>
+                <ece:Experience>9 years</ece:Experience>
+            </ece:Professor>
+        </ece:Faculty>
+    </ece:Department>
+
+</Departments>
