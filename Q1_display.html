@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border: 2px solid #667eea;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody tr {
+            transition: 0.3s ease;
+        }
+
+        tbody tr:hover {
+            background-color: #f5f5f5;
+            transform: scale(1.01);
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .info-box {
+            background: #e8f4f8;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .info-box h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Student Information System</h1>
+        <p class="subtitle">Complete Student Database</p>
+
+        <div class="info-box">
+            <h3>ℹ️ About This Page</h3>
+            <p>This page displays student information stored in XML format. The data is validated using both DTD and XML Schema (XSD). 
+            The table below shows all student records with their ID, Name, Age, Address, and Date of Birth.</p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Age</th>
+                    <th>Address</th>
+                    <th>Date of Birth</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>S001</td>
+                    <td>Rajesh Kumar</td>
+                    <td>20</td>
+                    <td>123 Main Street, Delhi</td>
+                    <td>2004-05-15</td>
+                </tr>
+                <tr>
+                    <td>S002</td>
+                    <td>Priya Singh</td>
+                    <td>19</td>
+                    <td>456 Oak Avenue, Mumbai</td>
+                    <td>2005-08-22</td>
+                </tr>
+                <tr>
+                    <td>S003</td>
+                    <td>Arjun Patel</td>
+                    <td>21</td>
+                    <td>789 Pine Road, Bangalore</td>
+                    <td>2003-12-10</td>
+                </tr>
+                <tr>
+                    <td>S004</td>
+                    <td>Neha Gupta</td>
+                    <td>20</td>
+                    <td>321 Elm Street, Pune</td>
+                    <td>2004-03-28</td>
+                </tr>
+                <tr>
+                    <td>S005</td>
+                    <td>Vikram Sharma</td>
+                    <td>22</td>
+                    <td>654 Maple Lane, Hyderabad</td>
+                    <td>2002-11-05</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
