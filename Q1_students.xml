@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Students SYSTEM "Q1_students.dtd">
+<Students>
+    <Student>
+        <SID>S001</SID>
+        <SName>Rajesh Kumar</SName>
+        <Age>20</Age>
+        <Address>123 Main Street, Delhi</Address>
+        <DOB>2004-05-15</DOB>
+    </Student>
+    <Student>
+        <SID>S002</SID>
+        <SName>Priya Singh</SName>
+        <Age>19</Age>
+        <Address>456 Oak Avenue, Mumbai</Address>
+        <DOB>2005-08-22</DOB>
+    </Student>
+    <Student>
+        <SID>S003</SID>
+        <SName>Arjun Patel</SName>
+        <Age>21</Age>
+        <Address>789 Pine Road, Bangalore</Address>
+        <DOB>2003-12-10</DOB>
+    </Student>
+    <Student>
+        <SID>S004</SID>
+        <SName>Neha Gupta</SName>
+        <Age>20</Age>
+        <Address>321 Elm Street, Pune</Address>
+        <DOB>2004-03-28</DOB>
+    </Student>
+    <Student>
+        <SID>S005</SID>
+        <SName>Vikram Sharma</SName>
+        <Age>22</Age>
+        <Address>654 Maple Lane, Hyderabad</Address>
+        <DOB>2002-11-05</DOB>
+    </Student>
+</Students>
