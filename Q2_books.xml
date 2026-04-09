@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Books SYSTEM "Q2_books.dtd">
+<Books>
+    <Book>
+        <Title>Introduction to Python</Title>
+        <Author>John Smith</Author>
+        <ISBN>978-0-13-110362-7</ISBN>
+        <Publisher>Tech Publications</Publisher>
+        <Edition>3rd Edition</Edition>
+        <Price>450.00</Price>
+    </Book>
+    <Book>
+        <Title>Web Development Basics</Title>
+        <Author>Sarah Johnson</Author>
+        <ISBN>978-0-13-468599-1</ISBN>
+        <Publisher>Dev Books</Publisher>
+        <Edition>2nd Edition</Edition>
+        <Price>550.00</Price>
+    </Book>
+    <Book>
+        <Title>Data Science Fundamentals</Title>
+        <Author>Michael Chen</Author>
+        <ISBN>978-0-13-676234-5</ISBN>
+        <Publisher>Science Press</Publisher>
+        <Edition>1st Edition</Edition>
+        <Price>750.00</Price>
+    </Book>
+    <Book>
+        <Title>JavaScript Guide</Title>
+        <Author>Emily Davis</Author>
+        <ISBN>978-0-13-789456-2</ISBN>
+        <Publisher>Code Masters</Publisher>
+        <Edition>4th Edition</Edition>
+        <Price>500.00</Price>
+    </Book>
+    <Book>
+        <Title>Database Design Patterns</Title>
+        <Author>Robert Wilson</Author>
+        <ISBN>978-0-13-234567-8</ISBN>
+        <Publisher>Database Experts</Publisher>
+        <Edition>2nd Edition</Edition>
+        <Price>600.00</Price>
+    </Book>
+</Books>
