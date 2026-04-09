@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .info-box {
+            background: #e8f8f5;
+            border-left: 4px solid #11998e;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .info-box h3 {
+            color: #11998e;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        thead {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border: 2px solid #11998e;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody tr {
+            transition: 0.3s ease;
+        }
+
+        tbody tr:hover {
+            background-color: #f0fffe;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .salary {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .action-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: 0.3s ease;
+            font-weight: 600;
+        }
+
+        .btn-modify {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+        }
+
+        .btn-modify:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(17, 153, 142, 0.4);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-content h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .form-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .form-buttons button {
+            flex: 1;
+        }
+
+        .btn-save {
+            background: #27ae60;
+            color: white;
+        }
+
+        .btn-save:hover {
+            background: #229954;
+        }
+
+        .btn-cancel {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .btn-cancel:hover {
+            background: #c0392b;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+        }
+
+        .success-message {
+            display: none;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>👔 Employee Management System</h1>
+        <p class="subtitle">Company Employee Database with Namespace and DOM</p>
+
+        <div class="info-box">
+            <h3>ℹ️ About This System</h3>
+            <p><strong>XML Namespace Used:</strong> <code>emp="http://www.company.com/employee"</code></p>
+            <p><strong>Features:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>All employee data stored in XML format with namespace validation</li>
+                <li>Data validated using both DTD and XML Schema (XSD)</li>
+                <li>DOM script to modify employee salaries in real-time</li>
+                <li>Click "Modify Salary" to update any employee's salary</li>
+            </ul>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            ✅ Salary updated successfully!
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Employee Name</th>
+                    <th>Department</th>
+                    <th>Salary (₹)</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTable">
+                <tr>
+                    <td>E001</td>
+                    <td>John Anderson</td>
+                    <td>Software Development</td>
+                    <td class="salary">60000</td>
+                    <td>john.anderson@company.com</td>
+                    <td><button class="btn-modify" onclick="modifySalary('E001', 'John Anderson', 60000)">Modify</button></td>
+                </tr>
+                <tr>
+                    <td>E002</td>
+                    <td>Sarah Mitchell</td>
+                    <td>Human Resources</td>
+                    <td class="salary">50000</td>
+                    <td>sarah.mitchell@company.com</td>
+                    <td><button class="btn-modify" onclick="modifySalary('E002', 'Sarah Mitchell', 50000)">Modify</button></td>
+                </tr>
+                <tr>
+                    <td>E003</td>
+                    <td>Michael Brown</td>
+                    <td>Finance</td>
+                    <td class="salary">55000</td>
+                    <td>michael.brown@company.com</td>
+                    <td><button class="btn-modify" onclick="modifySalary('E003', 'Michael Brown', 55000)">Modify</button></td>
+                </tr>
+                <tr>
+                    <td>E004</td>
+                    <td>Lisa Johnson</td>
+                    <td>Marketing</td>
+                    <td class="salary">52000</td>
+                    <td>lisa.johnson@company.com</td>
+                    <td><button class="btn-modify" onclick="modifySalary('E004', 'Lisa Johnson', 52000)">Modify</button></td>
+                </tr>
+                <tr>
+                    <td>E005</td>
+                    <td>Robert Davis</td>
+                    <td>Software Development</td>
+                    <td class="salary">65000</td>
+                    <td>robert.davis@company.com</td>
+                    <td><button class="btn-modify" onclick="modifySalary('E005', 'Robert Davis', 65000)">Modify</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal for Modifying Salary -->
+    <div id="salaryModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Modify Employee Salary</h2>
+            <div class="form-group">
+                <label>Employee ID:</label>
+                <input type="text" id="empID" readonly>
+            </div>
+            <div class="form-group">
+                <label>Employee Name:</label>
+                <input type="text" id="empName" readonly>
+            </div>
+            <div class="form-group">
+                <label>Current Salary (₹):</label>
+                <input type="number" id="currentSalary" readonly>
+            </div>
+            <div class="form-group">
+                <label>New Salary (₹):</label>
+                <input type="number" id="newSalary" placeholder="Enter new salary">
+            </div>
+            <div class="form-buttons">
+                <button class="btn-save" onclick="saveSalary()">Save Changes</button>
+                <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="Q4_script.js"></script>
+</body>
+</html>
