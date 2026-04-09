@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Information System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        thead {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border: 2px solid #f5576c;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody tr {
+            transition: 0.3s ease;
+        }
+
+        tbody tr:hover {
+            background-color: #fff5f5;
+            transform: scale(1.01);
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .info-box {
+            background: #fff0f5;
+            border-left: 4px solid #f5576c;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .info-box h3 {
+            color: #f5576c;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .price {
+            color: #2ecc71;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📖 Book Information System</h1>
+        <p class="subtitle">Online Book Database</p>
+
+        <div class="info-box">
+            <h3>ℹ️ About This Page</h3>
+            <p>This page displays book information stored in XML format. The data is validated using both DTD and XML Schema (XSD). 
+            Below is a complete catalog of available books with their details including title, author, ISBN, publisher, edition, and price.</p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Publisher</th>
+                    <th>Edition</th>
+                    <th>Price (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Introduction to Python</td>
+                    <td>John Smith</td>
+                    <td>978-0-13-110362-7</td>
+                    <td>Tech Publications</td>
+                    <td>3rd Edition</td>
+                    <td class="price">450.00</td>
+                </tr>
+                <tr>
+                    <td>Web Development Basics</td>
+                    <td>Sarah Johnson</td>
+                    <td>978-0-13-468599-1</td>
+                    <td>Dev Books</td>
+                    <td>2nd Edition</td>
+                    <td class="price">550.00</td>
+                </tr>
+                <tr>
+                    <td>Data Science Fundamentals</td>
+                    <td>Michael Chen</td>
+                    <td>978-0-13-676234-5</td>
+                    <td>Science Press</td>
+                    <td>1st Edition</td>
+                    <td class="price">750.00</td>
+                </tr>
+                <tr>
+                    <td>JavaScript Guide</td>
+                    <td>Emily Davis</td>
+                    <td>978-0-13-789456-2</td>
+                    <td>Code Masters</td>
+                    <td>4th Edition</td>
+                    <td class="price">500.00</td>
+                </tr>
+                <tr>
+                    <td>Database Design Patterns</td>
+                    <td>Robert Wilson</td>
+                    <td>978-0-13-234567-8</td>
+                    <td>Database Experts</td>
+                    <td>2nd Edition</td>
+                    <td class="price">600.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
