@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Namespaces and DOM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        .info-box {
+            background: #e8f4f8;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .info-box h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .departments {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .dept-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .dept-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .dept-card.cse {
+            border-top: 5px solid #3498db;
+        }
+
+        .dept-card.ece {
+            border-top: 5px solid #e74c3c;
+        }
+
+        .dept-header {
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .dept-card.cse .dept-header {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+        }
+
+        .dept-card.ece .dept-header {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        }
+
+        .prof-list {
+            padding: 20px;
+        }
+
+        .professor {
+            background: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+
+        .professor:last-child {
+            margin-bottom: 0;
+        }
+
+        .prof-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .prof-detail {
+            color: #666;
+            font-size: 0.95em;
+            margin: 3px 0;
+        }
+
+        .prof-detail strong {
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .departments {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏫 XML Namespaces and DOM</h1>
+
+        <div class="info-box">
+            <h3>📋 About XML Namespaces</h3>
+            <p><strong>Namespaces:</strong> Used to avoid naming conflicts by prefixing elements with a namespace identifier.</p>
+            <p><strong>In this example:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><code>cse:</code> - Computer Science Engineering namespace</li>
+                <li><code>ece:</code> - Electronics and Communication Engineering namespace</li>
+            </ul>
+            <p style="margin-top: 10px;"><strong>DOM Access:</strong> We can access and modify elements using JavaScript DOM methods like <code>getElementsByTagNameNS()</code>, <code>getElementsByTagName()</code>, and DOM properties.</p>
+        </div>
+
+        <div class="departments">
+            <div class="dept-card cse">
+                <div class="dept-header">🖥️ Computer Science Engineering</div>
+                <div class="prof-list">
+                    <div class="professor">
+                        <div class="prof-name">Dr. Amit Kumar</div>
+                        <div class="prof-detail"><strong>Subject:</strong> Data Structures</div>
+                        <div class="prof-detail"><strong>Experience:</strong> 10 years</div>
+                    </div>
+                    <div class="professor">
+                        <div class="prof-name">Dr. Neha Sharma</div>
+                        <div class="prof-detail"><strong>Subject:</strong> Database Management</div>
+                        <div class="prof-detail"><strong>Experience:</strong> 8 years</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dept-card ece">
+                <div class="dept-header">⚡ Electronics & Communication Engineering</div>
+                <div class="prof-list">
+                    <div class="professor">
+                        <div class="prof-name">Prof. Rajesh Patel</div>
+                        <div class="prof-detail"><strong>Subject:</strong> Signal Processing</div>
+                        <div class="prof-detail"><strong>Experience:</strong> 12 years</div>
+                    </div>
+                    <div class="professor">
+                        <div class="prof-name">Prof. Priya Gupta</div>
+                        <div class="prof-detail"><strong>Subject:</strong> Digital Electronics</div>
+                        <div class="prof-detail"><strong>Experience:</strong> 9 years</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
